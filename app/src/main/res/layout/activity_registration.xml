@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1.0"
+    tools:context="com.cloudcomputing.shopit.RegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/holo_red_light">
+
+            <TextView
+                android:id="@+id/warningText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:gravity="center"
+                android:text="Something went wrong.Try Again!"
+                android:textSize="25sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/holo_blue_dark" />
+    </LinearLayout>
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="0.1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!--   <com.pkmmte.view.CircularImageView
+                               android:id="@+id/signUpCircularView"
+                               android:layout_width="80dp"
+                               android:layout_height="80dp"
+                               android:layout_gravity="center"
+                               android:src="@drawable/app_icon"
+                               app:border="true"
+                               app:border_color="#000000"
+                               app:border_width="4dp"
+                               app:shadow="true" />
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="Tap the circle to set picture"
+                               android:textSize="15sp" />
+                   -->
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/nameTextboxLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/nameTextBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Name"
+                                android:inputType="textEmailAddress"
+                                android:textSize="20sp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/emailaddressTextBoxLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/emailaddressTextBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Email address"
+                                android:inputType="textEmailAddress"
+                                android:textSize="20sp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/passwordTextboxLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/passwordTextBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Password"
+                                android:inputType="textWebPassword"
+                                android:textSize="20sp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/confirmPasswordTextboxLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/confirmPasswordTextBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Confirm Password"
+                                android:inputType="textWebPassword"
+                                android:textSize="20sp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/okayButton"
+                            style="@style/semitransparentbuttonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorAccent"
+                            android:text="Continue" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="0.1" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</RelativeLayout>
